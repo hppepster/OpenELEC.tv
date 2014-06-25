@@ -19,13 +19,14 @@
 ################################################################################
 
 PKG_NAME="media_build"
-PKG_VERSION="1c8936d"
-MEDIA_BUILD_VERSION="2014-02-08"
+PKG_VERSION="e4a8d40"
+#MEDIA_BUILD_VERSION="2014-02-08"
+MEDIA_BUILD_VERSION="LATEST"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://git.linuxtv.org/media_build.git"
-PKG_URL="$DISTRO_SRC/${PKG_NAME}-${PKG_VERSION}.tar.xz"
+PKG_URL="http://mycvh.de/openelec/${PKG_VERSION}.tar.xz"
 PKG_DEPENDS_TARGET=""
 PKG_BUILD_DEPENDS_TARGET="toolchain linux"
 PKG_PRIORITY="optional"
