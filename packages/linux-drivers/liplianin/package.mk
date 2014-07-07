@@ -57,7 +57,7 @@ make_target() {
 
 makeinstall_target() {
   mkdir -p $INSTALL/lib/modules/$KERNEL_VER/updates/liplianin
-  find $ROOT/$PKG_BUILD/v4l/ -name \*.ko -exec strip --strip-debug {} \;
+  find $ROOT/$PKG_BUILD/v4l/ -name \*.ko -exec $STRIP --strip-debug {} \;
   find $ROOT/$PKG_BUILD/v4l/ -name \*.ko -exec cp {} $INSTALL/lib/modules/$KERNEL_VER/updates/liplianin \;
 
   mkdir -p $INSTALL/lib/firmware/
