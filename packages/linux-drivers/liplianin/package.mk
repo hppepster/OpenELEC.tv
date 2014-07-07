@@ -52,6 +52,10 @@ make_target() {
   sed -i 's|\\\\nRemoving obsolete files from \\$(KDIR26)|Removing obsolete files from \\$(DESTDIR)\\$(KDIR26)|g' v4l/scripts/make_makefile.pl
 
   LDFLAGS="" make DIR=$(kernel_path) prepare
+
+  sed -i -e "s/CONFIG_VIDEO_S5C73M3=m/# CONFIG_VIDEO_S5C73M3 is not set/g" \
+	  -e "s/CONFIG_VIDEO_MEM2MEM_DEINTERLACE=m/# CONFIG_VIDEO_MEM2MEM_DEINTERLACE is not set/g" v4l/.config
+
   LDFLAGS="" make DIR=$(kernel_path)
 }
 
