@@ -54,7 +54,9 @@ make_target() {
   LDFLAGS="" make DIR=$(kernel_path) prepare
 
   sed -i -e "s/CONFIG_VIDEO_S5C73M3=m/# CONFIG_VIDEO_S5C73M3 is not set/g" \
-	  -e "s/CONFIG_VIDEO_MEM2MEM_DEINTERLACE=m/# CONFIG_VIDEO_MEM2MEM_DEINTERLACE is not set/g" v4l/.config
+	  -e "s/CONFIG_VIDEO_MEM2MEM_DEINTERLACE=m/# CONFIG_VIDEO_MEM2MEM_DEINTERLACE is not set/g"\
+	  -e "s/CONFIG_DVB_DS3000=m/# CONFIG_DVB_DS3000 is not set/g"\
+	  -e "s/CONFIG_LIRC=m/# CONFIG_LIRC is not set/g" v4l/.config
 
   LDFLAGS="" make DIR=$(kernel_path)
 }
